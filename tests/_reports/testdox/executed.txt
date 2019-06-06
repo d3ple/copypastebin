@@ -1,0 +1,16 @@
+Unit\Example
+ [x] Basic test
+
+Feature\Example
+ [x] New paste view
+ [x] Show paste
+ [x] User pastes
+ [x] Show paste wrong
+ [x] Show search
+ [x] Search paste wrong
+ [x] Search paste
+ [x] Create paste with empty data
+ [x] Update paste unauthorized
+ [x] Update user unauthorized
+ [x] Create paste authorized
+
