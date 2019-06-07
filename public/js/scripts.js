@@ -22,12 +22,17 @@ const transformSyntaxTypeFields = () => {
 };
 
 
-const transformExpirationTimeFields = () => {
-    const expirationTimeFields = document.querySelectorAll('.expiration-time-field');
+const transformDateTimeFields = () => {
+    const expirationTimeFields = document.querySelectorAll('.datetime-field');
 
     expirationTimeFields.forEach((expirationTimeField) => {
         if(expirationTimeField.innerHTML === "0000-01-01 00:00:00") {
             expirationTimeField.innerHTML = "never";
+        } else {
+            const localDate = new Date(expirationTimeField.innerHTML + ' UTC');
+            const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+            const formattedDate = localDate.toLocaleDateString('default', options);
+            expirationTimeField.innerHTML = formattedDate;
         }
     });
 };
