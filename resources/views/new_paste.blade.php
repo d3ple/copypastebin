@@ -7,7 +7,6 @@
             <div class="column is-four-fifths">
                 <textarea class="textarea" placeholder="e.g. Hello world" rows="14" name="data" required></textarea>
             </div>
-
             <div class="column">
                 <div class="field">
                     <label class="label">Title:</label>
@@ -16,7 +15,6 @@
                                required>
                     </div>
                 </div>
-
                 <div class="field">
                     <label class="label">Paste Expiration:</label>
                     <div class="control">
@@ -33,7 +31,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="field">
                     <label class="label">Syntax Highlighting:</label>
                     <div class="control">
@@ -47,9 +44,8 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="field">
-                    <label class="label">Access</label>
+                    <label class="label">Access:</label>
                     <div class="control">
                         <div class="select is-fullwidth">
                             <select name="access_type" required>
@@ -62,11 +58,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="field">
                     <div class="control">
                         <button class="button is-warning" id="submitBtn" onclick="doAfterSubmit()" type="submit">
-                            <span>Create paste</span>
+                            <span><strong>Create paste</strong></span>
                         </button>
                     </div>
                 </div>

@@ -4,14 +4,14 @@
     <h1 class="title">
         Search Paste
     </h1>
-    <form method="POST" action="/search">
+    <form method="POST" action="/search" id="submitForm">
         @csrf
         <div class="field has-addons">
             <div class="control" style="width:35%;">
                 <input class="input" name="query" type="text" placeholder="e.g. Hello world" required>
             </div>
             <div class="control">
-                <button class="button is-warning" type="submit">
+                <button class="button is-warning" type="submit" id="submitBtn" onclick="doAfterSubmit()">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
@@ -56,7 +56,7 @@
                         <td><a href="/{{ $pasteItem->url }}">{{ $pasteItem->title }}</a></td>
                         <td class="syntax-type-field">{{ $pasteItem->syntax }}</td>
                         <td>{{ $pasteItem->created_at }}</td>
-                        <td class="expiration-time-field">{{ $pasteItem->expiration_time }}</td>
+                        <td class="datetime-field">{{ $pasteItem->expiration_time }}</td>
                     </tr>
                 @endforeach
                 </tbody>

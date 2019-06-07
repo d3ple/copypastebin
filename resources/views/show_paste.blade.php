@@ -19,7 +19,7 @@
         <h1 class="title">{{ $paste->title }}
             <span title="Access Type" class="tag is-info">{{ $paste->access_type }}</span>
             <span title="Syntax" class="tag is-primary syntax-type-field">{{ $paste->syntax }}</span>
-            <span title="Expiration Time" class="tag is-warning expiration-time-field">{{ $paste->expiration_time }}</span>
+            <span title="Expiration Time" class="tag is-warning datetime-field">{{ $paste->expiration_time }}</span>
         </h1>
         <pre class="paste-container">
             <code class="paste-area {{ $paste->syntax }}">{{ $paste->data }}</code>

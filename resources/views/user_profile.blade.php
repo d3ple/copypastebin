@@ -4,7 +4,7 @@
     <h1 class="title">
         User profile
     </h1>
-    <form method="POST" action="/profile" >
+    <form method="POST" action="/profile" id="submitForm">
         @method('PATCH')
         @csrf
         <div class="columns">
@@ -60,6 +60,6 @@
             </div>
         </div>
         @endif
-        <button class="button is-warning" type="submit">Update profile</button>
+        <button class="button is-warning" type="submit" id="submitBtn" onclick="doAfterSubmit()">Update profile</button>
     </form>
 @endsection
