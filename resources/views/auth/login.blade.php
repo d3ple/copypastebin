@@ -5,9 +5,9 @@
         <div class="hero-body">
             <div class="container">
                 <form method="POST" action="{{ route('login') }}"
-                      style="width: 300px; margin-left: auto; margin-right: auto;">
+                      style="width: 300px; margin-left: auto; margin-right: auto;" id="submitForm">
                     @csrf
-                    <h1 class="title is-2 has-text-centered"><span class="under">{{ __('Login') }}</span></h1><br>
+                    <h1 class="title is-2 has-text-centered"><span class="underline">{{ __('Login') }}</span></h1><br>
                     <div class="field">
                         <p class="control has-icons-left">
                             <input id="email" type="email"
@@ -31,13 +31,14 @@
                         </p>
                         @error('password')
                         <p class="help is-danger">
-                            <strong>{{ $message }}</strong>
+                            {{ $message }}
                         </p>
                         @enderror
                     </div>
                     <div class="field">
                         <p class="control">
-                            <button class="button is-warning is-medium is-fullwidth">
+                            <button class="button is-warning is-medium is-fullwidth" type="submit"
+                                    id="submitBtn" onclick="doAfterSubmit()">
                                 Let me in
                             </button>
                         </p>
@@ -47,14 +48,14 @@
                         <p class="control">
                         <div class="columns">
                             <div class="column">
-                                <a href="{{ url('/auth/twitter') }}" class="button is-fullwidth is-light is-rounded">
-                                    <span class="icon"><i class="fab fa-github"></i></span>
-                                    <span>Twitter</span>
+                                <a href="{{ url('/auth/google') }}" class="button is-fullwidth is-light is-rounded">
+                                    <span class="icon"><i class="fab fa-google"></i></span>
+                                    <span>Google</span>
                                 </a>
                             </div>
                             <div class="column">
                                 <a href="{{ url('/auth/github') }}" class="button is-fullwidth is-light is-rounded">
-                                    <span class="icon"><i class="fab fa-twitter"></i></span>
+                                    <span class="icon"><i class="fab fa-github"></i></span>
                                     <span>Github</span>
                                 </a>
                             </div>

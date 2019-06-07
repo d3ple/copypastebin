@@ -5,9 +5,9 @@
         <div class="hero-body">
             <div class="container">
                 <form method="POST" action="{{ route('register') }}"
-                      style="width: 300px; margin-left: auto; margin-right: auto;">
+                      style="width: 300px; margin-left: auto; margin-right: auto;" id="submitForm">
                     @csrf
-                    <h1 class="title is-2 has-text-centered"><span class="under">{{ __('Register') }}</span></h1><br>
+                    <h1 class="title is-2 has-text-centered"><span class="underline">{{ __('Register') }}</span></h1><br>
                     <div class="field">
                         <p class="control has-icons-left">
                             <input id="name" type="text" class="input form-control @error('name') is-danger @enderror"
@@ -42,7 +42,7 @@
                         </p>
                         @error('password')
                         <p class="help is-danger">
-                            <strong>{{ $message }}</strong>
+                            {{ $message }}
                         </p>
                         @enderror
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="field">
                         <p class="control">
-                            <button class="button is-warning is-medium is-fullwidth">
+                            <button class="button is-warning is-medium is-fullwidth" id="submitBtn" onclick="doAfterSubmit()">
                                 Let me in
                             </button>
                         </p>
@@ -87,92 +87,4 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-{{--<div class="container">--}}
-{{--    <div class="row justify-content-center">--}}
-{{--        <div class="col-md-8">--}}
-{{--            <div class="card">--}}
-{{--                <div class="card-header">{{ __('Register') }}</div>--}}
-
-{{--                <div class="card-body">--}}
-{{--                    <form method="POST" action="{{ route('register') }}">--}}
-{{--                        @csrf--}}
-
-{{--                        <div class="form-group row">--}}
-{{--                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>--}}
-
-{{--                            <div class="col-md-6">--}}
-{{--                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>--}}
-
-{{--                                @error('name')--}}
-{{--                                    <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                                @enderror--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="form-group row">--}}
-{{--                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>--}}
-
-{{--                            <div class="col-md-6">--}}
-{{--                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">--}}
-
-{{--                                @error('email')--}}
-{{--                                    <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                                @enderror--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="form-group row">--}}
-{{--                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>--}}
-
-{{--                            <div class="col-md-6">--}}
-{{--                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">--}}
-
-{{--                                @error('password')--}}
-{{--                                    <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                                @enderror--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="form-group row">--}}
-{{--                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>--}}
-
-{{--                            <div class="col-md-6">--}}
-{{--                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="form-group row mb-0">--}}
-{{--                            <div class="col-md-6 offset-md-4">--}}
-{{--                                <button type="submit" class="btn btn-primary">--}}
-{{--                                    {{ __('Register') }}--}}
-{{--                                </button>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <hr>--}}
-{{--                        <div class="form-group row mb-0">--}}
-{{--                            <div class="col-md-8 offset-md-4">--}}
-{{--                                <a href="{{ url('/auth/twitter') }}" class="btn btn-primary"><i class="fa fa-twitter"></i> Twitter</a>--}}
-{{--                                <a href="{{ url('/auth/github') }}" class="btn btn-primary"><i class="fa fa-twitter"></i> Github</a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </form>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
 @endsection
