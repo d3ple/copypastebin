@@ -23,6 +23,7 @@ class Paste extends Model
         return $query->where('access_type', "public");
     }
 
+
     public function scopeTitleContains($query, $search)
     {
         return $query->where('title', 'LIKE', '%' . $search . '%');
@@ -78,9 +79,5 @@ class Paste extends Model
             } else return true;
         }
     }
-
-
-
-
 
 }
