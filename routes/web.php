@@ -13,10 +13,7 @@
 
 Auth::routes();
 
-Route::get('/phpinfo', function() {
-    return view('phpinfo');
-});
-
+Route::get('/phpinfo', function() {return view('phpinfo');});
 
 Route::get('/auth/{provider}', 'Auth\SocialController@redirectToProvider');
 Route::get('/auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
