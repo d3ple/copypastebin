@@ -55,7 +55,7 @@
                         <td>{{ $loop->index+1 }}</td>
                         <td><a href="/{{ $pasteItem->url }}">{{ $pasteItem->title }}</a></td>
                         <td class="syntax-type-field">{{ $pasteItem->syntax }}</td>
-                        <td>{{ $pasteItem->created_at }}</td>
+                        <td class="datetime-field">{{ $pasteItem->created_at }}</td>
                         <td class="datetime-field">{{ $pasteItem->expiration_time }}</td>
                     </tr>
                 @endforeach
