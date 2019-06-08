@@ -48,7 +48,7 @@ unlisted — доступна только по ссылке
 5. Чтобы остановить контейнер использовать `docker-compose down`
 
 
-<br><br>
+<br>
 # CopyPastebin
 Simple copy of Pastebin on Laravel
 
