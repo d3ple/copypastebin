@@ -48,7 +48,7 @@
                                 <a class="button is-primary" href="{{ route('register') }}">{{ __('Register') }}</a>
                             @endif
                         @else
-                            <div class="dropdown is-hoverable" style="max-width:180px;">
+                            <div class="dropdown is-hoverable" style="max-width:200px;">
                                 <div class="dropdown-trigger" style="overflow-x: hidden;">
                                     <a class="button is-light" aria-haspopup="true" aria-controls="dropdown-menu">
                                         @if(Auth::user()->name != "")
