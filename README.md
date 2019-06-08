@@ -1,7 +1,7 @@
+![alt text](https://i.imgur.com/sXePWZZ.png "CopyPastebin logo")
+
 # CopyPastebin [![codecov](https://codecov.io/gh/d3ple/copypastebin/branch/master/graph/badge.svg)](https://codecov.io/gh/d3ple/copypastebin)
 Простой аналог сервиса Pastebin на Laravel
-
-![alt text](https://i.imgur.com/sXePWZZ.png "CopyPastebin logo")
 
 ## Реализованные функции
 - [x] Срок в течение которого "паста" будет доступна по ссылке: 10 мин., 1 час, 3 часа, 1 день, 1 неделя, 1 месяц, без ограничения. После окончания срока получить доступ к "пасте" нельзя.
