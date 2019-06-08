@@ -1,7 +1,7 @@
 ![alt text](https://i.imgur.com/N0QPPYk.png "CopyPastebin logo")
 
 # CopyPastebin [![codecov](https://codecov.io/gh/d3ple/copypastebin/branch/master/graph/badge.svg)](https://codecov.io/gh/d3ple/copypastebin)
-Простой аналог сервиса Pastebin на Laravel
+Маленькая копия сервиса Pastebin на Laravel
 
 ## Реализованные функции
 - [x] Срок в течение которого "паста" будет доступна по ссылке: 10 мин., 1 час, 3 часа, 1 день, 1 неделя, 1 месяц, без ограничения. После окончания срока получить доступ к "пасте" нельзя.
@@ -42,13 +42,13 @@ unlisted — доступна только по ссылке
 1. Копировать репозиторий `git clone https://github.com/d3ple/copypastebin.git`
 2. Перейти в директорию src `cd copypastebin/src` и установить зависимости для проекта `composer update`
 2. Вернуться в главную директорию, построить и запустить Docker контейнер `docker-compose build && docker-compose up -d`
-3. Создать таблицы БД `docker-compose exec php php /var/www/artisan migrate`, 
-    * Если выдаст ошибку, то выполнить комманду еще раз
+3. Создать таблицы БД `docker-compose exec php php /var/www/artisan migrate` 
+    * Если выдаст ошибку, то выполнить команду еще раз, все сработает
 4. Открыть `http://localhost:8080` в браузере
-5. Чтобы выключить контейнер использовать `docker-compose down`
+5. Чтобы остановить контейнер использовать `docker-compose down`
 
 
-
+###
 # CopyPastebin
 Simple copy of Pastebin on Laravel
 
