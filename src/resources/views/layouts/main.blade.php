@@ -51,7 +51,11 @@
                             <div class="dropdown is-hoverable" style="max-width:180px;">
                                 <div class="dropdown-trigger" style="overflow-x: hidden;">
                                     <a class="button is-light" aria-haspopup="true" aria-controls="dropdown-menu">
-                                        <span>{{ Auth::user()->name }}</span>
+                                        @if(Auth::user()->name != "")
+                                            <span>{{ Auth::user()->name }}</span>
+                                        @else
+                                            <span>{{ Auth::user()->email }}</span>
+                                        @endif
                                         <span class="icon is-small">
                                             <i class="fas fa-angle-down" aria-hidden="true"></i>
                                         </span>
