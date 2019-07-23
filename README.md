@@ -3,7 +3,7 @@
 # CopyPastebin [![codecov](https://codecov.io/gh/d3ple/copypastebin/branch/master/graph/badge.svg)](https://codecov.io/gh/d3ple/copypastebin)
 Simple copy of Pastebin on Laravel
 
-<br><br>
+
 ### Deployment
 
 Required for deployment:
